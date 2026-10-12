@@ -1,0 +1,248 @@
+// REPLACE THIS URL WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzbG8Lpr3KFvcWUqPGmSUUzG9-kHQIgALG5PzwS29W14a35BjL9GU2LK0M-La4llaK4kw/exec';
+
+// Toggle Mobile Navigation Menu
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+hamburgerBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+});
+
+// Close Mobile Menu on link click
+const mobileLinks = mobileMenu.querySelectorAll('a');
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+    });
+});
+
+// Simple Cart Quantity Increment
+const addToCartBtns = document.querySelectorAll('.add-to-cart-btn');
+const cartCount = document.getElementById('cart-count');
+let count = 0;
+
+addToCartBtns.forEach(button => {
+    button.addEventListener('click', () => {
+        count++;
+        cartCount.textContent = count;
+        
+        button.textContent = "Added!";
+        button.style.background = "#2ecc71";
+        button.style.color = "#fff";
+        
+        setTimeout(() => {
+            button.innerHTML = '<i class="fa-solid fa-cart-plus"></i> Add';
+            button.style.background = "gold";
+            button.style.color = "#000";
+        }, 1000);
+    });
+});
+
+// Google Sheets Form Submission
+const contactForm = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+const formStatus = document.getElementById('form-status');
+
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    formStatus.textContent = '';
+    formStatus.className = 'form-status';
+
+    // Prepare JSON payload
+    const payload = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        message: document.getElementById('message').value
+    };
+
+    fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify(payload)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.result === 'success') {
+            formStatus.textContent = 'Thank you! Your message has been sent successfully.';
+            formStatus.classList.add('success');
+            contactForm.reset();
+        } else {
+            throw new Error(data.error || 'Script error');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        formStatus.textContent = 'Something went wrong. Please try again.';
+        formStatus.classList.add('error');
+    })
+    .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+}
+a{
+    font-size: 1.1rem;
+    text-decoration: none;
+    color:black;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+li{
+    list-style: none;
+}
+.between{
+    justify-content: space-between;
+}
+.gap-2{
+    gap: 2rem;
+}
+.gap{
+    gap:3rem;
+}
+.navbar{
+    min-height: 14vh;
+}
+.wrapper{
+    max-width: 1400px;
+    margin: auto;
+    padding-inline:1.5rem;
+}
+.logo{
+    font-size: 2rem;
+    font-weight: bold;
+    color:gold;
+}
+.btn{
+    display: inline-block;
+    padding: .9rem 2rem;
+    background: gold;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    box-shadow:rgba(0,0,0,0.2)0 2px 1px;
+    transition: .3s ease-in-out;
+    color: red;
+}
+.btn:hover{
+    background: black;
+    color: white;
+}
+.cart-icon{
+    color: black;
+    font-size: 1.3rem;
+    position: relative;
+}
+.cart-icon .cart-value{
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    font-size: .85rem;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 100vw;
+    color: black;
+    text-align: center;
+    line-height: 20px;
+    background: gold;     
+}
+.desktop-action .hamburger{
+    font-size: 1.5rem;
+    display: none;
+}
+ .mobile-menu{
+    display: none;
+ }
+@media screen and (max-width:780px){
+
+    .navlist,
+    .desktop-action .btn{
+        display: none;
+    }
+
+    .desktop-action .hamburger{
+        display: block ;
+    }
+
+    .mobile-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        position: absolute;
+        top: 20%;
+        left: -100%;
+        transform: translate(-50%);
+        width: 20rem;
+        padding: 2rem;
+        background:white;
+        border: .1rem solid gold;
+        border-radius: 2rem;
+        box-shadow:rgba(0,0,0,0.05)8px 8px 8px,
+                   rgba(0,0,0,0.05)8px 8px 8px inset;
+        transition:all .5s ease-in-out;
+    }
+
+    .mobile-menu-active{
+        left:50px;
+        transform: translateX(-50%);
+    }
+}
+
+
+
+.hero-section{
+    background-color: gold;
+    min-height: 100vh;
+}

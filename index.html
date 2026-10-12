@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie - Enjoy Delicious Food</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar flex between wrapper">
+            <a href="#" class="logo">Foodie.</a>
+
+            <ul class="navlist flex gap">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="desktop-action flex gap-2">
+                <a href="#" class="cart-icon">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-value" id="cart-count">0</span>
+                </a>
+                <a href="#" class="btn">
+                    Sign in &nbsp;<i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </a>
+                <a href="javascript:void(0)" class="hamburger" id="hamburger-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </div>
+
+            <ul class="mobile-menu" id="mobile-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="#" class="btn">
+                        Sign in &nbsp;<i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="wrapper hero-container flex between">
+            <div class="content">
+                <span class="badge">Easy Way to Order</span>
+                <h1>Enjoy Your Delicious <span>Food</span></h1>
+                <p>We will fill your tummy with delicious food delivered fast right to your doorstep.</p>
+                <div class="hero-btns flex gap-2">
+                    <a href="#menu" class="btn btn-primary">Order Now</a>
+                    <a href="#services" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="delivery-boy.png" alt="Delivery Boy" class="main-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section wrapper">
+        <div class="section-title">
+            <h2>What We Serve</h2>
+            <p>Your Favorite Food Delivery Partner</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="easy-to-order.png" alt="Easy To Order">
+                <h3>Easy To Order</h3>
+                <p>You only need a few steps in ordering food via our platform.</p>
+            </div>
+            <div class="service-card">
+                <img src="fast-delivery.png" alt="Fastest Delivery">
+                <h3>Fastest Delivery</h3>
+                <p>Our delivery service is always on time, ensuring fresh and hot food.</p>
+            </div>
+            <div class="service-card">
+                <img src="best-quality.png" alt="Best Quality">
+                <h3>Best Quality</h3>
+                <p>Not only fast, but quality is also our number one priority for you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Menu Section -->
+    <section id="menu" class="menu-section wrapper">
+        <div class="section-title">
+            <h2>Our Popular Menu</h2>
+            <p>Explore Tasty Dishes</p>
+        </div>
+        <div class="menu-grid">
+      <div class="menu-card">
+    <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=600&q=80" alt="Double Cheeseburger">
+    <h3>Double Cheeseburger</h3>
+    <p class="description">Juicy double beef patty with melted cheese and fresh vegetables.</p>
+    <p class="price">$8.90</p>
+    <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Add</button>
+</div>
+
+<div class="menu-card">
+    <img src="https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=600&q=80" alt="Crispy Fried Chicken">
+    <h3>Crispy Fried Chicken</h3>
+    <p class="description">Golden crunchy fried chicken seasoned with authentic herbs and spices.</p>
+    <p class="price">$6.99</p>
+    <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Add</button>
+</div>
+
+<div class="menu-card">
+    <img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?auto=format&fit=crop&w=600&q=80" alt="Classic Italian Lasagna">
+    <h3>Classic Italian Lasagna</h3>
+    <p class="description">Rich beef bolognese layered with pasta and creamy cheese bake.</p>
+    <p class="price">$7.98</p>
+    <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Add</button>
+</div>
+    
+
+    <!-- STARTERS -->
+    <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80" alt="Crispy Samosa">
+        <h3>Crispy Samosa (2 Pcs)</h3>
+        <p class="description">Golden pastry filled with spiced potatoes and peas, served with chutneys.</p>
+        <p class="price">$2.50</p>
+        <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Add</button>
+    </div>
+
+    <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80" alt="Paneer Tikka">
+        <h3>Paneer Tikka Dry</h3>
+        <p class="description">Marinated cottage cheese cubes grilled in tandoor with onions and bell peppers.</p>
+        <p class="price">$8.99</p>
+        <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Add</button>
+    </div>
+
+    <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Veg Cheese Burger">
+        <h3>Veg Cheese Burger</h3>
+        <p class="description">Crispy veg patty topped with cheese slice, lettuce, and house sauce.</p>
+        <p class="price">$3.65</p>
+        <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Add</button>
+    </div>
+
+    <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=600&q=80" alt="Chicken 65">
+        <h3>Chicken 65</h3>
+        <p class="description">Spicy, deep-fried chicken bites tossed with curry leaves and green chilies.</p>
+        <p class="price">$4.78</p>
+        <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Add</button>
+    </div>
+
+    <!-- MAIN COURSE -->
+    <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=600&q=80" alt="Butter Masala Dosa">
+        <h3>Masala Dosa</h3>
+        <p class="description">Crispy South Indian crepe filled with spiced potato masala, chutney & sambar.</p>
+        <p class="price">$6.79</p>
+        <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Add</button>
+    </div>
+
+    <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80" alt="Paneer Tikka Pizza">
+        <h3>Paneer Tikka Pizza</h3>
+        <p class="description">Hand-tossed pizza topped with spiced paneer, capsicum, and melted mozzarella.</p>
+        <p class="price">$7.89</p>
+        <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Add</button>
+    </div>
+
+    <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80" alt="Paneer Butter Masala">
+        <h3>Paneer Butter Masala</h3>
+        <p class="description">Soft paneer cubes simmered in a rich, buttery tomato gravy.</p>
+        <p class="price">$7.77</p>
+        <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Add</button>
+    </div>
+
+    <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=600&q=80" alt="Butter Chicken">
+        <h3>Butter Chicken Curry</h3>
+        <p class="description">Tender chicken pieces cooked in smooth, spiced tomato & cream sauce.</p>
+        <p class="price">$8.76</p>
+        <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Add</button>
+    </div>
+
+    <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80" alt="Dal Makhani">
+        <h3>Dal Makhani</h3>
+        <p class="description">Slow-cooked black lentils enriched with butter and fresh cream.</p>
+        <p class="price">$7.86</p>
+        <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Add</button>
+    </div>
+
+    <!-- RICE & BREADS -->
+    <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80" alt="Chicken Dum Biryani">
+        <h3>Chicken Dum Biryani</h3>
+        <p class="description">Aromatic long-grain basmati rice cooked with marinated chicken and herbs.</p>
+        <p class="price">$7.00</p>
+        <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Add</button>
+    </div>
+
+    <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?auto=format&fit=crop&w=600&q=80" alt="Veg Dum Biryani">
+        <h3>Veg Dum Biryani</h3>
+        <p class="description">Fragrant basmati rice layered with fresh vegetables and saffron.</p>
+        <p class="price">$6.88</p>
+        <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Add</button>
+    </div>
+
+    <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80" alt="Butter Naan">
+        <h3>Butter Naan (2 Pcs)</h3>
+        <p class="description">Soft tandoori flatbread brushed with garlic and butter.</p>
+        <p class="price">$5.67</p>
+        <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Add</button>
+    </div>
+
+    <!-- BEVERAGES & DESSERTS -->
+    <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=600&q=80" alt="Mango Lassi">
+        <h3>Mango Lassi</h3>
+        <p class="description">Sweet yogurt smoothie blended with ripe mango pulp.</p>
+        <p class="price">$7.89</p>
+        <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Add</button>
+    </div>
+
+    <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80" alt="Masala Chai">
+        <h3>Special Masala Chai</h3>
+        <p class="description">Traditional Indian milk tea brewed with cardamom, ginger, and spices.</p>
+        <p class="price">$7.65</p>
+        <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Add</button>
+    </div>
+
+    <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=600&q=80" alt="Gulab Jamun">
+        <h3>Chocolate Stick (2 Pcs)</h3>
+        <p class="description">Warm milk-solid fried dumplings soaked in cardamom sugar syrup.</p>
+        <p class="price">$8.00</p>
+        <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Add</button>
+    </div>
+
+    <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80" alt="Sizzling Brownie">
+        <h3>Sizzling Chocolate Brownie</h3>
+        <p class="description">Fudgy warm chocolate brownie topped with vanilla ice cream and fudge shake</p>
+        <p class="price">$6.00</p>
+        <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Add</button>
+    </div>
+
+    <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80" alt="Oreo Milkshake">
+        <h3>Oreo Milkshake</h3>
+        <p class="description">Creamy blended fresh milk with ice cream, topped with whipped cream.</p>
+        <p class="price">$4.00</p>
+        <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i> Add</button>
+    </div>
+
+</div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section wrapper flex between">
+        <div class="about-img">
+            <img src="delivery-boy-with-phone.png" alt="Track Order">
+        </div>
+        <div class="about-content">
+            <h2>Track Your Order Anytime</h2>
+            <p>Stay updated on where your food is with our real-time order tracking system. Receive notifications from preparation to delivery right at your door.</p>
+            <a href="#" class="btn">Download App</a>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-section wrapper">
+        <div class="section-title">
+            <h2>Contact Us</h2>
+            <p>Get in Touch with Foodie</p>
+        </div>
+        <div class="contact-container">
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter Your Mobile No" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="btn submit-btn" id="submit-btn">Send Message</button>
+                <p id="form-status" class="form-status"></p>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Cart & Checkout Modal -->
+<div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+        <div class="cart-modal-header flex between">
+            <h2>Your Order Summary</h2>
+            <span id="close-cart-btn" class="close-cart">&times;</span>
+        </div>
+        
+        <div id="cart-items-container" class="cart-items-container">
+            <!-- Items added dynamically by JS -->
+            <p class="empty-cart-msg">Your cart is empty.</p>
+        </div>
+
+        <div class="cart-summary">
+            <div class="summary-row flex between">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <div class="summary-row flex between">
+                <span>Delivery Fee</span>
+                <span id="cart-delivery">$2.00</span>
+            </div>
+            <hr>
+            <div class="summary-row flex between total-row">
+                <span>Total Amount</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button id="checkout-btn" class="btn checkout-btn">Proceed to Pay</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Add 'site-locked' class to body -->
+<body class="site-locked">
+
+    <!-- Mandatory Login Gate -->
+    <div id="auth-gate" class="auth-gate">
+        <div class="auth-card">
+            <div class="logo">Foodie.</div>
+            <h2>Sign In Required</h2>
+            <p>Please sign in to access our menu and order food.</p>
+
+            <form id="auth-form">
+                <div class="form-group">
+                    <label for="gate-email">Email Address</label>
+                    <input type="email" id="gate-email" placeholder="enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="gate-password">Password</label>
+                    <input type="password" id="gate-password" placeholder="enter your password" required>
+                </div>
+                <button type="submit" class="btn submit-btn">Sign In & Access Website</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Rest of your original body elements (Header, Hero, Services, Menu, etc.) -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="wrapper flex between footer-container">
+            <div class="footer-logo">
+                <a href="#" class="logo">Foodie.</a>
+                <p>Fresh food brought right to your home.</p>
+            </div>
+            <p>&copy; 2026 Foodie. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
